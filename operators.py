@@ -19,19 +19,30 @@ import bpy
 from bpy.types import Operator
 
 
-class ADDON_OT_MyOperator(Operator):
-    """This does something."""
-    bl_label = "My Operator"
-    bl_description = "This does something"
-    bl_idname = "my_addon.my_operator"
+class SEANBLEND_OT_Disable(Operator):
+    """Disables the addon in blender preferences"""
+    bl_label = "Disable Add-on"
+    bl_description = "Disables the addon in blender preferences"
+    bl_idname = "seanblend.disable"
 
     def execute(self, context):
-        print("Hello")
+        bpy.ops.preferences.addon_disable(module="SeanBlend_Add-on")
+        return {"FINISHED"}
+
+class SEANBLEND_OT_Remove(Operator):
+    """Removes the addon in blender preferences"""
+    bl_label = "Remove Add-on (Blender might crash)"
+    bl_description = "Removes the addon in blender preferences (risk of Blender crashing)"
+    bl_idname = "seanblend.remove"
+
+    def execute(self, context):
+        bpy.ops.preferences.addon_remove(module="SeanBlend_Add-on")
         return {"FINISHED"}
 
 
 classes = (
-    ADDON_OT_MyOperator,
+    SEANBLEND_OT_Disable,
+    SEANBLEND_OT_Remove,
 )
 
 def register():

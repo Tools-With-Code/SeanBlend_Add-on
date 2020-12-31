@@ -19,9 +19,9 @@ import bpy
 from bpy.types import Panel
 
 
-class ADDON_PT_MyPanel(Panel):
-    bl_label = "My Panel"
-    bl_idname = "ADDON_PT_MyPanel"
+class SEANBLEND_PT_SeanBlendAddon(Panel):
+    bl_label = "SeanBlend"
+    bl_idname = "SEANBLEND_PT_SeanBlendAddon"
     bl_space_type = "PROPERTIES"
     bl_region_type = "WINDOW"
     bl_context = "scene"
@@ -31,11 +31,22 @@ class ADDON_PT_MyPanel(Panel):
         layout = self.layout
         settings = context.scene.idname
 
-        layout.label(text="Hello")
+class SEANBLEND_PT_Settings(Panel):
+    bl_label = "Settings"
+    bl_idname = "SEANBLEND_PT_Settings"
+    bl_parent_id = "SEANBLEND_PT_SeanBlendAddon"
+
+    def draw(self, context):
+        layout = self.layout
+        settings = context.scene.idname
+
+        layout.operator("seanblend.disable")
+        layout.operator("seanblend.remove")
 
 
 classes = (
-    ADDON_PT_MyPanel,
+    SEANBLEND_PT_SeanBlendAddon,
+    SEANBLEND_PT_Settings,
 )
 
 def register():
