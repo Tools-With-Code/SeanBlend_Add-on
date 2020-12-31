@@ -16,16 +16,16 @@
 # ##### END GPL LICENSE BLOCK #####
 
 bl_info = {
-    "name":        "My Add-on",
-    "description": "A Blender add-on",
-    "author":      "Your Name",
+    "name":        "SeanBlend_Add-on",
+    "description": "A add-on made by SeanBlend",
+    "author":      "Sean Huang",
     "version":     (0, 0, 1),
     "blender":     (2, 80, 0),
-    "location":    "Somewhere",
+    "location":    "",
     "warning":     "",
-    "doc_url":     "https://github.com/user/repo",
-    "tracker_url": "https://github.com/user/repo/issues",
-    "category":    "Something"
+    "doc_url":     "https://github.com/Tools-With-Code/SeanBlend_Add-on",
+    "tracker_url": "https://github.com/Tools-With-Code/SeanBlend_Add-on/issues",
+    "category":    "SeanBlend"
 }
 
 from . import props, operators, ui

@@ -21,9 +21,9 @@ from bpy.props import BoolProperty, IntProperty, FloatProperty, StringProperty, 
 
 
 class AddonProps(PropertyGroup):
-    my_prop: BoolProperty(
-        name="My Prop",
-        description="A property"
+    prop: StringProperty(
+        name="prop",
+        description="blank string property"
     )
 
 
