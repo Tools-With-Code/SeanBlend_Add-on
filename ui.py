@@ -31,6 +31,7 @@ class SEANBLEND_PT_SeanBlendAddon(Panel):
         layout = self.layout
         settings = context.scene.idname
 
+        
 class SEANBLEND_PT_Settings(Panel):
     bl_label = "Settings"
     bl_idname = "SEANBLEND_PT_Settings"
@@ -56,3 +57,4 @@ def register():
 def unregister():
     for cls in classes:
         bpy.utils.unregister_class(cls)
+        
