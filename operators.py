@@ -32,7 +32,7 @@ class SEANBLEND_OT_Disable(Operator):
 
 class SEANBLEND_OT_Remove(Operator):
     """Removes the addon in blender preferences"""
-    bl_label = "Remove Add-on (Blender might crash)"
+    bl_label = "Remove Add-on"
     bl_description = "Removes the addon in blender preferences (risk of Blender crashing)"
     bl_idname = "seanblend.remove"
 
