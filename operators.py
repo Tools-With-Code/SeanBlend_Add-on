@@ -29,6 +29,7 @@ class SEANBLEND_OT_Disable(Operator):
         bpy.ops.preferences.addon_disable(module="SeanBlend_Add-on")
         return {"FINISHED"}
 
+
 class SEANBLEND_OT_Remove(Operator):
     """Removes the addon in blender preferences"""
     bl_label = "Remove Add-on (Blender might crash)"
